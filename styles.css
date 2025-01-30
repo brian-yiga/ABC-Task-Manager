@@ -1,0 +1,226 @@
+:root {
+    --primary: #0f0147;
+    --secondary: #fbc108;
+    --tertiary: #80cc28;
+    --blue: #3871c1;
+    --lightBlue: #00adef;
+    --orange: #f68712;
+    --green: #40b93c;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--lightBlue);
+    height: 100vh;
+    margin-top: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: var(--orange);
+    margin-top: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+h1 {
+    color: var(--secondary);
+}
+
+img {
+    width: 90px;
+}
+
+.appContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 50%;
+    background-color: var(--green);
+    height: 60vh;
+    padding-top: 30px;
+    position: relative;
+    color: var(--primary);
+    border-radius: 0 0 10px 10px;
+}
+
+button {
+    color: var(--primary);
+}
+
+#inputForm {
+    width: 80%;
+    display: flex;
+}
+
+#input {
+    width: 70%;
+    flex-grow: 1;
+    border: none;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
+    padding-left: 10px;
+}
+
+#input::placeholder {
+    padding-left: 20px;
+    color: rgb(209, 218, 201);
+}
+
+#submitBtn {
+    width: 30%;
+    flex-grow: 1;
+    cursor: pointer;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: var(--primary);
+}
+
+.task-item {
+    margin: 5px;
+    width: 100%;
+}
+
+.checkboxBtn {
+    margin-right: 45px;
+}
+
+
+.clearTask {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    position: absolute;
+    top: 88%;
+}
+
+
+#listContainer {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.clearTask {
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+}
+
+#clearBtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: grey;
+}
+
+#listManager {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-top: 10px;
+    background-color: var(--tertiary);
+    height: 70%;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgb(173, 173, 173);
+    border-radius: 5px;
+}
+
+.deleteBtn {
+    position: absolute;
+    right: 130px;
+    cursor: pointer;
+}
+
+.editBtn {
+    position: absolute;
+    right: 90px;
+    cursor: pointer;
+}
+
+.editBtn,
+.deleteBtn {
+    background-color: transparent;
+    border: none;
+}
+
+.editBtn i, 
+.deleteBtn i {
+    font-size: 18px;
+    color: var(--primary);
+  }
+  
+  .editBtn:hover i, .deleteBtn:hover i {
+    color: var(--secondary); 
+  }
+  
+
+/*Media Queries*/
+@media screen and (max-width: 1024px) {
+    header {
+        width: 80%;
+    }
+    
+    .appContainer {
+        width: 80%;
+    }
+
+    .editBtn {
+        right: 90px;
+    }
+
+    .deleteBtn {
+        right: 130px;
+    }
+}
+
+@media screen and (max-width: 785px) {
+    body {
+        background-color: var(--primary);
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .appContainer {
+        width: 95%;
+        height: 100vh;
+    }
+
+    header {
+        width: 95%;
+        margin-top: 0;
+    }
+
+    .checkboxBtn {
+        margin-right: 15px;
+    }
+
+    .editBtn {
+        right: 40px;
+    }
+
+    .deleteBtn {
+        right: 80px;
+    }
+}
+
+
+
+

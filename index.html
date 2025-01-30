@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>ABC Task Manager</title>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/logo.png" alt="ABC Company Logo" />
+      <h1>ABC Task Manager</h1>
+    </header>
+
+    <div class="appContainer">
+      <form action="submit" id="inputForm">
+        <input type="text" id="input" onkeypress="handleOnKeyPress(event)" placeholder="Enter New Task"/>
+        <input type="submit" value="Add Task" id="submitBtn" />
+      </form>
+      <div id="listManager">
+        <ul id="listContainer"></ul>
+      </div>
+      <div class="clearTask">
+        <p id="totalTasks"></p>
+        <button id="clearBtn">Clear All</button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
